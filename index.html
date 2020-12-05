@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <title></title>
+  </head>
+  <body onload="init()">
+    <div class="fullContainer">
+      <h1>Attorney Payout Calculator</h1>
+      <div class="top section">
+        <div class="adjustableValue">
+          <h2>Percentage</h2>
+          <div class="percent details"></div>
+          <div class="possiblyHide">
+            <label class="possiblyHide" for="percentValue">Override percentage</label>
+            <input class="possiblyHide" type="number" id="overridePercent" onchange="setPercent(this.value)"/>
+          </div>
+        </div>
+        <div>
+          <h2>Attorney payout</h2>
+          <div class="outcome details"></div>
+          <div class="possiblyHide">
+            <div class="overrideOutcome possiblyHide"></div>
+          </div>
+        </div>
+      </div>
+      <div class="middle section">
+        <span class="headerContainer">
+          <h2 class="settlementHeader">Settlment</h2><p class="finePrint">post-deductions</p>
+        </span>
+        <input id="slider" type="range" min="0" max="5000000" onchange="setValue(this.value)">
+        <label for="sliderValInput">$</label>
+        <input type="text" id="sliderValInput" onchange="setValue(this.value)"/>
+      </div>
+      <div class="bottom section">
+        <h2>Client payout</h2>
+        <div class="difference details"></div>
+        <div class="possiblyHide">
+          <div class="overrideDifference possiblyHide"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
